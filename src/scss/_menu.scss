@@ -1,0 +1,15 @@
+.navigation {
+    list-style: none;
+    background: $c-brand;
+}
+
+.navigation-item {
+    display: inline-block;
+    margin: 0 15px;
+    a {
+        font: 14px 'Roboto';
+        color: $c-feature-text;
+        font-weight: bold;
+        text-decoration: none;
+    }
+}

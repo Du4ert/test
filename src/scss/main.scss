@@ -1,0 +1,47 @@
+@import 'colors';
+@import 'menu';
+@import 'modal';
+
+
+.photo-container {
+    max-width: 748px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background: $c-brand;
+    overflow: hidden;
+}
+
+.photo {
+    width: 200px;
+    height: 300px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid $c-feature;
+    border-radius: 5%;
+    background-color: $c-bg-inner;
+    text-align: center;
+    a {
+        text-decoration: none;
+    }
+}
+
+.photo-title {
+    text-align: center;
+}
+
+.photo-description {
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis;   
+}
+
+.photo-img {
+    width: 100%;
+    height: auto;
+}
+
+.hidden {
+    display: none;
+}
