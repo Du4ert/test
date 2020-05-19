@@ -15,17 +15,23 @@ function openPhoto(e) {
         toggleHidden(photoModal);
         renderPhoto(photo);
     }
+    photoModal.addEventListener('click', closeModal);
+    window.addEventListener('keyup', closeModal);
+}
 
+function keyPress(event) {
+    console.log(event);
 }
 
 function closeModal(e) {
     const target = e.target;
 
-    if (e.target === photoModal || e.target === modalClose) {
-
+    if (e.target === photoModal || e.target === modalClose || e.key === 'Escape') {
     e.preventDefault();
     toggleHidden(photoModal);
     }
+    photoModal.removeEventListener('click', closeModal);
+    window.removeEventListener('keyup', closeModal);
 }
 
 function renderPhoto(photo) {
@@ -38,4 +44,8 @@ function toggleHidden(element) {
 }
 
 photos.addEventListener('click', openPhoto);
-photoModal.addEventListener('click', closeModal);
+
+
+$(window).click((e) => {
+    console.log('Клик по тэгу ' + $(e.target).prop("tagName"))
+});
