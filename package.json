@@ -25,7 +25,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-terser": "^1.2.0",
-    "node-reset-scss": "^1.0.1"
+    "node-normalize-scss": "^8.0.1"
   },
   "dependencies": {
     "jquery": "^3.5.1"

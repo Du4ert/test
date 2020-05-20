@@ -34,9 +34,11 @@ gulp.task('php', () => {
 gulp.task('style', () => {
     return gulp.src('src/scss/**/*')
         .pipe(development(gp.sourcemaps.init()))
+        //.pipe(gp.concat('main.scss'))
         .pipe(gp.sass({
-            includePath: 'Дерьмо'
-        })
+            includePaths: require('node-normalize-scss').includePaths
+            }
+        )
         .on('error', gp.sass.logError)
         )
         .pipe(gp.autoprefixer())
@@ -61,8 +63,10 @@ gulp.task('script', () => {
 
 gulp.task('script:lib', () => {
     return gulp.src(['node_modules/jquery/dist/jquery.js', 'src/js/lib.js'])
+    .pipe(development(gp.sourcemaps.init()))
     .pipe(gp.concat('lib.js'))
     .pipe(production(gp.terser()))
+    .pipe(development(gp.sourcemaps.write()))
     //.pipe(gp.rename('library-rename.js'))
     .pipe(gulp.dest('app/js'))
 })
