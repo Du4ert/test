@@ -1,0 +1,10 @@
+//   Подключение шрифтов
+//  *input  - Имя файла
+//  *output - @font-face
+//
+//@include font-face('Playfair', 'ChelseaMarket-Regular', 300, normal);
+
+@font-face {
+    font-family: "OpewSans";
+    src: url("../fonts/Cicle_Fina-webfont.ttf") format("ttf");
+  }

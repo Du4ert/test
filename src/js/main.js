@@ -1,9 +1,9 @@
 'use strict';
 
-const photoModal = document.querySelector('.photo-modal'),
-    modalContent = photoModal.querySelector('.modal-content'),
-    modalClose = photoModal.querySelector('.modal-close'),
-    photos = document.querySelector('.photo-container');
+const   photoModal = document.querySelector('.photo-modal'),
+        modalContent = photoModal.querySelector('.modal-content'),
+        modalClose = photoModal.querySelector('.modal-close'),
+        photos = document.querySelector('.photo-container');
 
 function openPhoto(e) {
     const target = e.target;
@@ -17,6 +17,7 @@ function openPhoto(e) {
     }
     photoModal.addEventListener('click', closeModal);
     window.addEventListener('keyup', closeModal);
+    console.log('Event listener added!');
 }
 
 function keyPress(event) {
@@ -32,6 +33,7 @@ function closeModal(e) {
     }
     photoModal.removeEventListener('click', closeModal);
     window.removeEventListener('keyup', closeModal);
+    console.log('Event listener removed!');
 }
 
 function renderPhoto(photo) {
@@ -46,6 +48,6 @@ function toggleHidden(element) {
 photos.addEventListener('click', openPhoto);
 
 
-$(window).click((e) => {
-    console.log('Клик по тэгу ' + $(e.target).prop("tagName"))
-});
+// $(window).click((e) => {
+//     console.log('Клик по тэгу ' + $(e.target).prop("tagName"))
+// });
