@@ -68,11 +68,20 @@
                     adipisicing elit. Optio sed ipsam ipsum voluptas vel minima possimus itaque, maiores repellat?</p>
             </a>
         </article>
+        <article class="photo">
+            <a href="#">
+                <img class="photo-img" src="https://arrowheadguys.com/wp-content/uploads/2018/11/avatar.jpg" alt="pic">
+                <h2 class="photo-title">Avatar 2</h2>
+                <p class="photo-description" data-description="Full description">Lorem ipsum dolor, sit amet consectetur
+                    adipisicing elit. Optio sed ipsam ipsum voluptas vel minima possimus itaque, maiores repellat?</p>
+            </a>
+        </article>
         </section>
 
         <div class="photo-modal hidden">
             
             <div class="modal-container">
+            
                 <img class="modal-close" src="img/close.png" />
                 <div class="modal-content" href="#">
                     <img class="photo-img" src="img/EjWOHzzY4DM.jpg" alt="pic">

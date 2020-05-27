@@ -4,7 +4,4 @@
 //
 //@include font-face('Playfair', 'ChelseaMarket-Regular', 300, normal);
 
-@font-face {
-    font-family: "OpewSans";
-    src: url("../fonts/Cicle_Fina-webfont.ttf") format("ttf");
-  }
+@include font-face('Moonhouse');

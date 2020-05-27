@@ -7,11 +7,16 @@
 @import 'modal';
 
 a {
-    font-family: 'OpewSans' !important;
+    font-family: 'Papyrus' !important;
 }
 
+$photo-width: 200px;
+$photo-margin: 10px;
+
 .photo-container {
-    max-width: 748px;
+    max-width: $photo-width * 3 + $photo-margin * 4;
+    //padding: 10px;
+    box-sizing: content-box;
     margin: 5px auto;
     display: flex;
     flex-wrap: wrap;
@@ -22,10 +27,11 @@ a {
 }
 
 .photo {
-    width: 200px;
+    width: $photo-width;
     height: 300px;
+    box-sizing: border-box;
     padding: 10px;
-    margin: 10px auto;
+    margin: $photo-margin 10px;
     border: 1px solid $c-feature;
     border-radius: 5%;
     background-color: $c-bg-inner;
@@ -34,6 +40,7 @@ a {
 }
 
 .photo-title {
+    margin: 5px;
     text-align: center;
 }
 

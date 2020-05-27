@@ -3,7 +3,7 @@
 //  *input  - Имя файла
 //  *output - @font-face
 //
-@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+@mixin font-face($font-family, $file-path: $font-family, $font-weight: normal, $font-style : normal) {
     $file-path: $fontsPath + $file-path;
     @font-face {
       font-family: $font-family;
